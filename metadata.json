@@ -1,0 +1,6 @@
+{
+  "name": "3D & Graphic Design Portfolio",
+  "description": "A high-end minimalist 3D rendering and graphic design portfolio featuring elegant dark-mode design, smooth marquee scolling, interactive imagery, and dual-language localization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Outfit:wght@600;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", "Gilroy", "Space Grotesk", sans-serif;
+  --font-sans: "Noto Sans SC", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Custom scrollbar and ambient styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #050506;
+}
+
+body {
+  color: #fafafa;
+  background-color: #050506;
+  overflow-x: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom glow haze overlay representing 画板2 abstract figure */
+.blur-haze-figure {
+  background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.45) 0%, rgba(13, 148, 136, 0.22) 30%, rgba(59, 130, 246, 0.1) 50%, transparent 70%);
+  filter: blur(45px);
+  mix-blend-mode: plus-lighter;
+  animation: floatHaze 12s ease-in-out infinite alternate;
+}
+
+.glow-ambient-green {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+@keyframes floatHaze {
+  0% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.05) rotate(3deg);
+  }
+  100% {
+    transform: translateY(10px) scale(0.95) rotate(-3deg);
+  }
+}
+
+/* Custom circular layout styles */
+.orbital-track {
+  position: relative;
+  width: min(580px, 90vw);
+  height: min(580px, 90vw);
+  border: 1px dashed rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-orbit-spin {
+  animation: orbit-spin 55s linear infinite;
+}
+
+.animate-orbit-spin-reverse {
+  animation: orbit-spin-reverse 55s linear infinite;
+}
+
+/* Pause child animations when parent is hovered */
+#orbit-track-core:hover .animate-orbit-spin-reverse {
+  animation-play-state: paused;
+}
+
+/* Luxury card shadow */
+.card-shadow-lux {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+}
