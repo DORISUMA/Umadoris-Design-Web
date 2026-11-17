@@ -7,9 +7,10 @@ interface HeaderProps {
   language: "en" | "zh";
   setLanguage: (lang: "en" | "zh") => void;
   activeSection: string;
+  onNavSelect?: (id: string) => void;
 }
 
-export default function Header({ language, setLanguage, activeSection }: HeaderProps) {
+export default function Header({ language, setLanguage, activeSection, onNavSelect }: HeaderProps) {
   const t = translations.header;
   const [isScrolled, setIsScrolled] = React.useState(false);
 
@@ -24,6 +25,10 @@ export default function Header({ language, setLanguage, activeSection }: HeaderP
   }, []);
 
   const scrollToSection = (id: string) => {
+    if (onNavSelect) {
+      onNavSelect(id);
+      return;
+    }
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });

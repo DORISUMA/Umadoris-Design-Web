@@ -318,6 +318,27 @@ export default function App() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleNavSelect = (id: string) => {
+    if (id === "intro") {
+      if (!isResumeVisible) {
+        setIsResumeVisible(true);
+        setTimeout(() => {
+          const el = document.getElementById("detailed-resume");
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 120);
+      } else {
+        const el = document.getElementById("detailed-resume");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+      return;
+    }
+    handleScrollToSection(id);
+  };
+
   const handleExperienceClick = () => {
     setIsExperienceExpanded(true);
     setIsResumeVisible(true);
@@ -369,6 +390,7 @@ export default function App() {
         language={language} 
         setLanguage={setLanguage} 
         activeSection={activeSection} 
+        onNavSelect={handleNavSelect}
       />
 
       {/* SECTION 1: COVER PAGE (Reflecting "画板2" with Ghostly Blur Glimmer & Minimalists Texts) */}
