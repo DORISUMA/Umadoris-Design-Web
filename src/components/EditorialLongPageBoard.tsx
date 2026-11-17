@@ -237,36 +237,31 @@ const tabPresets: Record<ActiveTab, TabPreset> = {
   },
   wechat: {
     tabKey: "wechat",
-    nameZh: "公众号设计 1.0版 (五一)",
-    nameEn: "WeChat Editorial v1.0 (Labor Day)",
+    nameZh: "公众号设计 1.0版 (国庆)",
+    nameEn: "WeChat Editorial v1.0",
     edition: "1.0版",
-    titleMain: "五一产品软文",
-    titleSub: "Arda艺术厨电 · 于四季无声 藏鲜有序",
+    titleMain: "国庆产品软文",
+    titleSub: "Arda艺术厨电公众号",
     version: "1.0版",
     versionSub: "初代升级*",
-    conceptText: "核心需求：对品牌节日推文避免生硬的产品卖点罗列，以“于四季无声，藏鲜有序”为主线，将春夏秋冬自然时序与现代嵌入式冰箱保鲜科技紧密结合；长图分春日锁鲜、夏日冷饮、秋日珍馐、冬日储鲜四个生活篇章，展现极致保鲜实力；互动层在手机端支持滑动预览四季长卷与邀请函全貌。",
+    conceptText: "核心需求：应当对大型节日的品牌节日推文需要避免太硬的产品卖点讲解，以产品在日常生活中使用为切入口，将生活与艺术结合，更符合品牌的高端定位，场景设置为画展与生活场景结合置入对应产品，在互动层的次屏接入此产品核心卖点，更好的宣传产品吸引客户。",
     colorBars: [
-      { name: "松石青绿 / Pine Moss Green", color: "#546b5b", percent: 50 },
-      { name: "落霞暖赭 / Sunset Ochre", color: "#9e4334", percent: 30 },
-      { name: "雅致暖灰 / Architectural Slate", color: "#b3a99c", percent: 20 },
+      { name: "大地驼金 / Camel Gold", color: "#c07a3c", percent: 60 },
+      { name: "香槟象牙 / Champagne", color: "#f5dfc6", percent: 30 },
+      { name: "波尔多酒红 / Bordeaux", color: "#3d0f14", percent: 10 },
     ],
     phoneSellingPoints: [
-      "于四季无声，藏鲜有序 · 艺术保鲜长图",
-      "超大专属果蔬与变温抽屉，全时锁鲜",
+      "护鲜有道，果蔬持久新鲜",
+      "超大专属果蔬抽屉",
       "0度生物养鲜，温湿双控营养不流失",
-      "以技术见未来 · 新品私享会邀请函联动",
+      "为水果定制专属“锁鲜密室”",
     ],
-    phoneImage: "/assets/aistudio/______8f990f1c.png",
-    phoneImages: [
-      "/assets/aistudio/______8f990f1c.png",
-      "/assets/aistudio/1_13ca2467.png",
-      "/assets/aistudio/bianwen_2_1f7ee836.png"
-    ],
-    aspectRatio: "1080 / 2560",
+    phoneImage: "/assets/shou_ji.png",
+    aspectRatio: "443 / 799",
     cardImages: [
-      "/assets/aistudio/______8f990f1c.png",
-      "/assets/aistudio/1_13ca2467.png",
-      "/assets/aistudio/bianwen_2_1f7ee836.png"
+      "/assets/aistudio/_____01_de46e7c7.png",
+      "/assets/aistudio/_____01____b03ce5d5.png",
+      "/assets/aistudio/_____01____2_6eb5c9b9.png"
     ],
   },
   detail: {
@@ -660,7 +655,7 @@ const projectNames: Record<string, { zh: string; en: string }> = {
   "re-qing": { zh: "让所有关系在厨房里重新沸腾 · 新年推文 (3.0版)", en: "Kitchen Connections · New Year (v3.0)" },
   "yi-wu-jing-hua": { zh: "重塑全屋衣物\"净\"化论 · 洗护软文 (4.0版)", en: "Garment Care Purification (v4.0)" },
   "liu-bai-zhu-yi": { zh: "《8m²的留白主义》 · 妇女节软文 (1.0版)", en: "8m² White Space · Women's Day (v1.0)" },
-  "hua-kuang-zhi-jian": { zh: "于四季无声 藏鲜有序 · 节日推文 (1.0版)", en: "Four Seasons Freshness · Editorial (v1.0)" },
+  "hua-kuang-zhi-jian": { zh: "画框之间 · 国庆推文 (1.0版)", en: "Between Frames · National Day (v1.0)" },
 };
 
 const wechatVersionList: { key: ActiveTab; labelZh: string; labelEn: string; edition: string }[] = [
@@ -668,7 +663,7 @@ const wechatVersionList: { key: ActiveTab; labelZh: string; labelEn: string; edi
   { key: "wechat_xinnian", labelZh: "3.0版 · 新年贺岁推文 (关系)", labelEn: "v3.0 · New Year Feature", edition: "3.0版" },
   { key: "wechat4", labelZh: "4.0版 · 洗护净衣软文 (全屋)", labelEn: "v4.0 · Whole-Home Purification", edition: "4.0版" },
   { key: "wechat_funv", labelZh: "1.0版 · 妇女节软文 (8m²留白)", labelEn: "v1.0 · Women's Day Feature", edition: "1.0版" },
-  { key: "wechat", labelZh: "1.0版 · 节日产品软文 (藏鲜有序)", labelEn: "v1.0 · Four Seasons Freshness", edition: "1.0版" },
+  { key: "wechat", labelZh: "1.0版 · 国庆产品软文 (画框之间)", labelEn: "v1.0 · National Day Editorial", edition: "1.0版" },
   { key: "wechat_duanwu", labelZh: "2.0版 · 系列产品软文 (端午)", labelEn: "v2.0 · Dragon Boat Feature", edition: "2.0版" },
   { key: "wechat2", labelZh: "2.0版 · 洗护产品软文 (松弛)", labelEn: "v2.0 · Laundry Editorial", edition: "2.0版" },
 ];
